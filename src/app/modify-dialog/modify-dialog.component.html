@@ -1,0 +1,18 @@
+<div class="mainSection">
+  <h3>Edit Credentials</h3>
+<form [formGroup]="modifyForm" (ngSubmit)="modify()">
+    <mat-form-field appearance="outline">
+      <input type="text" matInput formControlName="acntName" placeholder="Account Name">
+      <mat-error *ngIf="modifyForm.get('acntName').hasError('required')">Enter account name</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <input type="text" matInput formControlName="userId" placeholder="User ID">
+        <mat-error *ngIf="modifyForm.get('userId').hasError('required')">Enter UserId</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input type="text" matInput formControlName="password" placeholder="Password">
+        <mat-error *ngIf="modifyForm.get('password').hasError('required')">Enter Password</mat-error>
+      </mat-form-field>
+      <button mat-button class="button" color="primary" type="submit">Modify New Details</button>
+  </form>
+</div>

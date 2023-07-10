@@ -1,0 +1,16 @@
+<div class="editMain">
+    <form [formGroup]="editForm">
+        <h3 style="text-align: center;">For which account do you want to modify?</h3>
+        <mat-form-field appearance="outline" class="eachField">
+            <input type="text" placeholder="Account Name" matInput formControlName="acntName" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option.acntName">
+                {{option.acntName}}
+              </mat-option>
+            </mat-autocomplete>
+            <mat-error *ngIf="editForm.get('acntName').hasError('required')">Please enter account name to modify</mat-error>
+          </mat-form-field>
+        <button mat-button class="button" color="primary" type="button" (click)="modify()">Modify</button>
+        <button mat-button class="button" color="primary" type="button" (click)="delete()">Delete</button>
+    </form>
+</div>

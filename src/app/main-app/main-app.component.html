@@ -1,0 +1,10 @@
+<div class="main">
+    <div class="header">
+        Password Manager
+    </div>
+    <mat-tab-group (selectedTabChange)="tabClick()" mat-stretch-tabs="false" mat-align-tabs="center">
+        <mat-tab label="Search"><app-search #tabChange></app-search></mat-tab>
+        <mat-tab label="Add"><app-add></app-add></mat-tab>
+        <mat-tab label="Edit"><app-edit></app-edit></mat-tab>
+    </mat-tab-group>
+</div>

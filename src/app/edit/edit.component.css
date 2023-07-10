@@ -1,0 +1,17 @@
+.eachField{
+    width: 90%;
+    margin: 14px;
+}
+
+.editMain{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.button{
+    width: 90%;
+    background-color: rebeccapurple;
+    margin: 14px;
+    color: white !important;
+}

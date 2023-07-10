@@ -1,0 +1,44 @@
+.eachField{
+    width: 90%;
+    margin: 14px;
+}
+
+.button{
+    width: 90%;
+    background-color: rebeccapurple;
+    margin: 14px;
+    color: white !important;
+}
+
+mat-label{
+    color: white
+}
+
+.cards{
+    background-image: linear-gradient(225deg, #10EBF8, #FC08F6, #FFE515);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px;
+}
+
+.eachCard{
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.accountHeader{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.mainContainer{
+    margin:4px, 4px;
+                padding:4px;
+                background-color: green;
+                width: 500px;
+                height: 110px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                text-align:justify;
+}

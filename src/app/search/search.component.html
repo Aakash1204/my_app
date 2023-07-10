@@ -1,0 +1,20 @@
+<form [formGroup]="searchForm" (ngSubmit)="search()">
+  <mat-form-field class="eachField" appearance="outline">
+    <input matInput type="text" placeholder="Account Name" formControlName="search" />
+  </mat-form-field>
+  <button mat-button class="button" color="primary" type="submit">Search</button>
+</form>
+
+<div style= "height: 543px; overflow-y: scroll;" >
+<div *ngFor="let data of filterDatas">
+<div class="cards" *ngIf="filterDatas?.length > 0">
+  <ul class="eachCard" (click)="openDialog(data)">
+    <li class="accountHeader">{{data.acntName}}</li>
+    <li style="padding-top: 4px;">{{data.userId}}</li>
+  </ul>
+</div>
+</div>
+<div *ngIf="filterDatas?.length == 0">
+  <img src="../../assets/nodata.png" width="100%"/>
+</div>
+</div>

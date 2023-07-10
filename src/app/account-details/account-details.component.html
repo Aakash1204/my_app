@@ -1,0 +1,11 @@
+<div class="cardMain">
+    <p class="header">{{data.acntName}}</p>
+    <span class="userDetailsBlock">
+        <p>{{data.userId}}</p>
+        <mat-icon (click)="copy(data.userId)">filter_none</mat-icon>
+    </span>
+    <span class="userDetailsBlock">
+        <a (click)="togglePass()">{{passwordShow ? data.password : '●●●●●●●●'}}</a>
+        <mat-icon (click)="copy(data.password)">filter_none</mat-icon>
+    </span>
+</div>

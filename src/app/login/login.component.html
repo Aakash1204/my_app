@@ -1,0 +1,17 @@
+<div class="main">
+  <img src="../../assets/login.png" width="100%"/>
+<h1 class="header">Login</h1>
+<form [formGroup]="loginForm">
+<div class="example-container">
+  <h1>Hi {{name}}!</h1>
+  <h2 *ngIf="createPin">Create your PIN now</h2>
+  <h2 *ngIf="!createPin">Please enter your PIN</h2>
+    <mat-form-field class="eachField" appearance="fill">
+      <input matInput class="input" type="text" placeholder="XXXX" autocomplete="off" (keyup)="login()" formControlName="pin" maxlength="4" required/>
+      <mat-error *ngIf="loginForm.get('pin').hasError('required')">Please enter your 4 digit pin to login</mat-error>
+      <mat-error *ngIf="loginForm.controls['pin'].hasError('pattern')">Pin should only be numbers</mat-error>
+    </mat-form-field>
+  </div>
+  <button mat-button *ngIf="createPin" class="button" color="primary" type="button" (click)="generatePin()">Create Pin</button>
+</form>
+</div>

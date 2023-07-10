@@ -1,0 +1,18 @@
+<form [formGroup]="addForm" >
+    <mat-form-field class="eachField" appearance="outline">
+      <input matInput type="text" placeholder="Account Name" formControlName="acntName" required />
+      <mat-error *ngIf="addForm.get('acntName').hasError('required')">Please enter account name</mat-error>
+    </mat-form-field>
+    <mat-form-field class="eachField" appearance="outline">
+        <input matInput type="text" placeholder="UserId" formControlName="userId" required />
+        <mat-error *ngIf="addForm.get('userId').hasError('required')">Please enter userID</mat-error>
+      </mat-form-field>
+      <mat-form-field class="eachField" appearance="outline">
+        <input matInput type="text" placeholder="Password" formControlName="password" required />
+        <mat-error *ngIf="addForm.get('password').hasError('required')">Please enter password</mat-error>
+      </mat-form-field>
+    <button mat-button class="button" color="primary" type="button" (click)="add()">Add</button>
+    <input type="file" id="file" (change)="import($event)" multiple="false" />
+    <label for="file"><mat-icon>insert_drive_file</mat-icon>Import from Excel file</label>
+    <p class="note">*Please note that previous all datas will be deleted</p>
+  </form>

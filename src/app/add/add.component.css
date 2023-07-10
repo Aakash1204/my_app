@@ -1,0 +1,38 @@
+.eachField{
+    width: 90%;
+    margin: 14px;
+}
+
+.button{
+    width: 90%;
+    background-color: rebeccapurple;
+    margin: 14px;
+    color: white !important;
+
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label{
+    color:white;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 22px 0px 15px;
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.note{
+    color: red;
+    text-align: center;
+    font-size: 13px;
+}
+
+mat-icon{
+    padding-right: 5px;
+}

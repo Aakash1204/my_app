@@ -1,0 +1,17 @@
+<ng-container *ngIf="!loginData">
+    <div class="headerPage">
+        <h1 class="header">Welcome</h1>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="start()">
+    <mat-form-field class="eachField" appearance="outline">
+        <input matInput class="input" type="text" placeholder="Name" formControlName="name" required />
+        <mat-error *ngIf="form.get('name').hasError('required')">Please enter your name here</mat-error>
+    </mat-form-field>
+    <button class="startButton" type="submit">Get Started &nbsp; <mat-icon>arrow_forward</mat-icon></button>
+</form>
+</ng-container>
+
+
+<ng-container *ngIf="loginData">
+    <app-login></app-login>
+</ng-container>
